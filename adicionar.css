@@ -1,0 +1,317 @@
+/*--------Global--------*/
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------HEADER--------*/
+header{
+    display: flex;
+    flex-direction: row;
+    height: 130px;
+    width: 1400px;
+    background-color: #85CDF5;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link{
+    position: relative;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    color: #333333;
+    display: inline-block;
+    width: fit-content;
+}
+
+.link::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background-color: #333333;
+    transition: width 0.4s;
+}
+
+.link:hover::after{
+    width: 100%;
+}
+
+header div a img{
+    width: 96px;
+    height: 111px;
+    margin-top: 13px;
+}
+
+header #link1{
+    height: 35px;
+    margin-left: 229px;
+}
+
+header #link2{
+    height: 35px;
+    margin-right: 221px;
+}
+
+/*--------MAIN---------*/
+main{
+    display: flex;
+    height: 1036px;
+    width: 1400px;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 958px;
+    height: 874px;
+    border-width: 0px, 0px, 0px, 0px;
+    border-style: solid;
+    border-color: #333333;
+    align-items: center;
+    justify-content: center;
+}
+
+#title h1{
+    display: flex;
+    width: 812px;
+    height: 81px;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size:49px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+}
+
+#dados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: left;
+    width: 762px;
+    height: 512px;
+}
+
+#dados #nome{
+    width: 564px;
+    height: 87px;
+    margin-right: 20px;
+}
+
+#dados #anos{
+    width: 177px;
+    height: 87px;
+}
+
+#dados #foto{
+    width: 761px;
+    height: 89px;
+}
+
+#dados #desc{
+    width: 761px;
+    height: 298px;
+    resize: none;
+}
+#dados #nome p{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    width: 354px;
+    height: 41px;
+}
+
+#dados #anos p{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    width: 119px;
+    height: 41px;
+}
+
+#dados #foto p{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    width: 248px;
+    height: 41px;
+}
+
+#dados #desc p{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    width: 204px;
+    height: 41px;
+}
+
+#dados #nome input{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    width: 564px;
+    height: 39px;
+    background: #E6E6E6;
+    border: 1px solid #333333;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#dados #anos input{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    width: 177px;
+    height: 39px;
+    background: #E6E6E6;
+    border: 1px solid #333333;
+    text-align: center;
+}
+
+#dados #foto input{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    width: 761px;
+    height: 39px;
+    background: #E6E6E6;
+    border: 1px solid #333333;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#dados #desc textarea{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    width: 761px;
+    height: 250px;
+    background: #E6E6E6;
+    border: 1px solid #333333;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#button{
+    width: 209px;
+    height: 60px;
+    border: 1px solid #333333;
+    margin-top: 50px;
+}
+
+/*----------FOOTER-----------*/
+footer{
+    width: 1400px;
+    height: 275px;
+}
+
+#retangulo{
+    width: 1400px;
+    height: 5px;
+    background: linear-gradient(270deg, #2C5680 0%, #DEB959 100%);
+}
+
+#linha{
+    width: 1400px;
+    height: 0px;
+    border: 1px solid #000000;
+}
+
+footer #tudo{
+    display: flex;
+    flex-direction: row;
+    width: 1400px;
+    height: 268px;
+    background: #333333;
+}
+
+footer #sec{
+    display: flex;
+    flex-direction: row;
+    height: 168px;
+    width: 668px;
+    gap: 40px;
+    margin-right: 50px;
+}
+
+footer #rest{
+    height: 168px;
+    width: 668px;
+}
+
+#map{
+    width: 250px;
+    height: 168px;
+    border: none;
+    margin-left: 291px;
+}
+
+#infos{
+    display: flex;
+    flex-direction: column;
+    width: 378px;
+    height: 102px;
+}
+
+#infos div{
+    display: flex;
+    flex-direction: row;
+}
+
+#infos div p{
+    font-family: 'Darker Grotesque';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 15px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    }
+
+#pin{
+    width: 19px;
+    height: 19px;
+}
+
+#tel{
+    width: 14px;
+    height: 14px;
+}
+
+#email{
+    width: 15px;
+    height: 15px;
+}
+
+#info_link #quem{
+    width: 144px;
+    height: 30px;
+}
+
+#dev{
+    display: flex;
+    flex-direction: column;
+}
+
+#dev p{
+    width: 119px;
+    height: 24px;
+    font-family: 'Darker Grotesque';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+#dev img{
+    width: 104px;
+    height: 104px;
+}

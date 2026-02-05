@@ -1,0 +1,267 @@
+/*--------Global--------*/
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------HEADER--------*/
+header{
+    display: flex;
+    flex-direction: row;
+    height: 130px;
+    width: 1400px;
+    background-color: #85CDF5;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link{
+    position: relative;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    color: #333333;
+    display: inline-block;
+    width: fit-content;
+}
+
+.link::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background-color: #333333;
+    transition: width 0.4s;
+}
+
+.link:hover::after{
+    width: 100%;
+}
+
+header div a img{
+    width: 96px;
+    height: 111px;
+    margin-top: 13px;
+}
+
+header #link1{
+    height: 35px;
+    margin-left: 229px;
+}
+
+header #link2{
+    height: 35px;
+    margin-right: 221px;
+}
+
+/*------------MAIN------------*/
+main{
+    display: flex;
+    flex-direction: column;
+    width: 1400px;
+    height: 648px;
+    background: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#sec1{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Darker Grotesque';
+    height: 200px;
+    width: 960px;
+    gap: 50px;
+}
+
+#sec1 div h1{
+    width: 597px;
+    height: 81px;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+#sec1 div p{
+    width: 498px;
+    height: 19px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#sec2{
+    width: 960px;
+    height: 188px;
+    font-family: 'Darker Grotesque';
+}
+
+#sec2 #nome{
+    width: 868px;
+    height: 84px;
+    border: none;
+    border-bottom: 1px solid #333333;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Darker Grotesque';
+}    
+
+#sec2 #idade{
+    width: 72px;
+    height: 84px;
+    border: none;
+    border-bottom: 1px solid #333333;
+    margin-left: 16px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Darker Grotesque';
+}
+
+#sec2 #email{
+    width: 960px;
+    height: 84px;
+    border: none;
+    border-bottom: 1px solid #333333;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Darker Grotesque';
+}
+
+input::placeholder{
+    font-family: 'Darker Grotesque';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: #000000;
+    margin: 0;
+}
+
+#adotar{
+    width: 209px;
+    height: 60px;
+    background: #2C5680;
+    border: 1px solid #333333;
+    font-family: 'Darker Grotesque';
+    font-weight: 600;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+/*----------FOOTER-----------*/
+footer{
+    width: 1400px;
+    height: 275px;
+}
+
+#retangulo{
+    width: 1400px;
+    height: 5px;
+    background: linear-gradient(270deg, #2C5680 0%, #DEB959 100%);
+}
+
+#linha{
+    width: 1400px;
+    height: 0px;
+    border: 1px solid #000000;
+}
+
+footer #tudo{
+    display: flex;
+    flex-direction: row;
+    width: 1400px;
+    height: 269px;
+    background: #333333;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+}
+
+footer #sec{
+    display: flex;
+    flex-direction: row;
+    height: 168px;
+    gap: 40px;
+    margin-right: 50px;
+}
+
+footer #rest{
+    height: 168px;
+}
+
+#map{
+    width: 250px;
+    height: 168px;
+    border: none;
+}
+
+#infos{
+    display: flex;
+    flex-direction: column;
+    width: 378px;
+    height: 102px;
+}
+
+#infos div{
+    display: flex;
+    flex-direction: row;
+}
+
+#infos div p{
+    font-family: 'Darker Grotesque';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 15px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    }
+
+#pin{
+    width: 19px;
+    height: 19px;
+}
+
+#tel{
+    width: 14px;
+    height: 14px;
+}
+
+#email{
+    width: 15px;
+    height: 15px;
+}
+
+#info_link #quem{
+    width: 144px;
+    height: 30px;
+}
+
+#dev{
+    display: flex;
+    flex-direction: column;
+}
+
+#dev p{
+    width: 119px;
+    height: 24px;
+    font-family: 'Darker Grotesque';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+#dev img{
+    width: 104px;
+    height: 104px;
+}
