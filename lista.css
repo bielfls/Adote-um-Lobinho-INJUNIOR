@@ -1,0 +1,398 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+    height: 130px;
+    background: #85CDF5;
+    font-family: Darker Grotesque;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header h2, a {
+    color: #333333;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#pesquisa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    align-content: center;
+    align-self: center;
+}
+
+#botao_procurar {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+#barra_pesquisa button:hover {
+    background: #85CDF5;
+    transition: 0.5s;
+}
+
+#pesquisa input{
+    align-content: center;
+    align-self: center; 
+    width: 808px;
+    height: 47px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 24px;
+    font-family: Darker Grotesque;
+    font-weight: 600;
+}
+
+#barra_pesquisa {
+    display: flex;
+    align-items: center;
+    border: 1px solid #333333
+}
+
+#mais_lobo {
+    width: 130px;
+    height: 47px;
+    background: #DEB959;
+    font-family: Darker Grotesque;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#check_adotados {
+    display: flex;
+    flex-direction: row;
+    margin-left: 255px;
+    align-items: center;
+    gap: 10px;
+}
+
+#check_adotados input {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    border-width: 1px;
+    border-radius: 5px;
+    background: #FAFAFA;
+    border: 1px solid #333333
+}
+
+#check_adotados p {
+    font-family: Darker Grotesque;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #353535;
+}
+
+#perfis {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.perfil_lobo_tipo1 {
+    width: 999px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-self: center;
+    gap: 50px;
+}
+
+.perfil_lobo_tipo1 .imagens {
+    position: relative;
+    display: inline-block;
+}
+
+.perfil_lobo_tipo1 .imagens::before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    background-color: #2b4c6e;
+    z-index: -1;
+    border: 4px solid #333333
+}
+
+.perfil_lobo_tipo1 .imagens img{
+    width: 430px;
+    height: 328px;
+
+}
+
+.perfil_lobo_tipo1 .textos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.perfil_lobo_tipo1 .textos p {
+    font-family: Darker Grotesque;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+}
+
+.perfil_lobo_tipo1 .texto_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.perfil_lobo_tipo1 .nome_idade {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.perfil_lobo_tipo1 .nome_idade h2{
+    font-family: Darker Grotesque;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.perfil_lobo_tipo1 .nome_idade p {
+    font-family: Darker Grotesque;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.perfil_lobo_tipo1 .texto_link a{
+    width: 157px;
+    height: 45px;
+    background: #DEB959;
+    font-family: Darker Grotesque;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+;
+}
+
+
+
+
+
+.perfil_lobo_tipo2 {
+    width: 999px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-self: center;
+    gap: 50px;
+}
+
+.perfil_lobo_tipo2 .imagens {
+    position: relative;
+    display: inline-block;
+}
+
+.perfil_lobo_tipo2 .imagens::before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: +30px;
+    width: 100%;
+    height: 100%;
+    background-color: #2b4c6e;
+    z-index: -1;
+    border: 4px solid #333333
+}
+
+.perfil_lobo_tipo2 .imagens img{
+    width: 430px;
+    height: 328px;
+
+}
+
+.perfil_lobo_tipo2 .textos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: end;
+}
+
+.perfil_lobo_tipo2 .textos p {
+    font-family: Darker Grotesque;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+}
+
+.perfil_lobo_tipo2 .texto_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.perfil_lobo_tipo2 .nome_idade {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.perfil_lobo_tipo2 .nome_idade h2{
+    font-family: Darker Grotesque;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.perfil_lobo_tipo2 .nome_idade p {
+    font-family: Darker Grotesque;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.perfil_lobo_tipo2 .texto_link a{
+    width: 157px;
+    height: 45px;
+    background: #DEB959;
+    font-family: Darker Grotesque;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+;
+}
+
+#paginas {
+    display: flex;
+    align-content: center;
+    align-self: center;
+    margin-top: 30px;
+}
+
+#paginas button {
+    background-color: transparent;
+    border: none;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+#paginas p {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    height: 275px;
+    align-items: center;
+    background: #333333;
+    justify-content: space-around;
+}
+
+#mapa_texto {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+#meio_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#linhas_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.textos_footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.textos_footer img {
+    width: 19px;
+    height: 19px;
+}
+
+.textos_footer p {
+    font-family: Darker Grotesque;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 15px;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
+
+#meio_footer a {
+    font-family: Darker Grotesque;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    width: 144px;
+    height: 45px;
+    background: #DEB959;
+    text-align: center;
+}
+
+#final_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#final_footer p{
+    font-family: Darker Grotesque;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+}
