@@ -62,8 +62,15 @@ main h1 {
 }
 
 #imagem {
+    width: 430px;
+    height: 328px;
     position: relative;
     display: inline-block;
+}
+
+#imagem img {
+    width: 430px;
+    height: 328px;
 }
 
 #imagem::before{
