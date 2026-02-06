@@ -1,7 +1,13 @@
 // funcao assincrona para buscar lobinhos com paginação
-async function buscarLobinhosPaginados(pagina = 1, limite = 4) {
+async function buscarLobinhosPaginados(pagina = 1, limite = 4, filtroAdotados = false) {
     try {
-        const response = await fetch(`http://localhost:3000/lobinhos?_page=${pagina}&_limit=${limite}`);
+        let url = `http://localhost:3000/lobinhos?_page=${pagina}&_limit=${limite}`;
+
+        if(filtroAdotados){
+            url += "&adotado=true"
+        }
+
+        const response = await fetch(url);
 
         if (!response.ok) {
             throw new Error(`Erro HTTP! Status: ${response.status}`);
@@ -29,9 +35,14 @@ async function buscarLobinhosPaginados(pagina = 1, limite = 4) {
 }
 
 //funcao assincrona pra buscar lobinho pelo nome
-async function buscarLobinhoNome(nome, pagina = 1, limite = 4) {
+async function buscarLobinhosNome(nome, pagina = 1, limite = 4, filtroAdotados = false) {
     try {
-        const response = await fetch(`http://localhost:3000/lobinhos?_page=${pagina}&_limit=${limite}&nome_like=${nome}`);
+        let url = `http://localhost:3000/lobinhos?_page=${pagina}&_limit=${limite}&nome_like=${nome}`;
+
+        if (filtroAdotados) {
+            url += '&adotado=true';
+        }
+        const response = await fetch(url);
 
         if (!response.ok) {
             throw new Error(`Erro HTTP! Status: ${response.status}`);
@@ -88,5 +99,5 @@ async function buscarLobinhoId(id, pagina = 1, limite = 1) {
 }
 
 //testando funcoes
-//buscarLobinhosPaginados(1, 4);
+//buscarLobinhosPaginados(1, 4, false);
 //buscarLobinhoNome("donavon", 1, 4)

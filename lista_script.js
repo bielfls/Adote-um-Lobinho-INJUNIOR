@@ -1,3 +1,5 @@
+let filtroAdotados = false; //filtro de adotados
+
 // funcao que "desenha" os lobos na tela
 function renderizarLobos(listadelobos) {
     const container = document.getElementById('perfis');
@@ -9,7 +11,7 @@ function renderizarLobos(listadelobos) {
         const divlobo = document.createElement('div');
         divlobo.classList.add(tipoLayout);
 
-        if (tipoLayout === 'perfil_lobo_tipo1') {
+        if (tipoLayout === 'perfil_lobo_tipo1' && !(lobo.adotado)) {
             divlobo.innerHTML = `
                 <div class="imagens">
                     <img src="${lobo.imagem}" alt="${lobo.nome}">
@@ -26,11 +28,46 @@ function renderizarLobos(listadelobos) {
                     ${lobo.adotado ? '<p><strong>(Adotado)</strong></p>' : ''}
                 </div>
             `;
-        } else {
+        } else if ((tipoLayout === 'perfil_lobo_tipo1' && lobo.adotado)){
+            divlobo.innerHTML = `
+                <div class="imagens">
+                    <img src="${lobo.imagem}" alt="${lobo.nome}">
+                </div>
+                <div class="textos">
+                    <div class="texto_link">
+                        <div class="nome_idade">
+                            <h2>${lobo.nome}</h2>
+                            <p>Idade: ${lobo.idade} anos</p>
+                        </div>
+                        <button class="botao_adotado">Adotado</button>
+                    </div>
+                    <p>${lobo.descricao}</p>
+                    ${lobo.adotado ? '<p><strong>(Adotado)</strong></p>' : ''}
+                </div>
+            `;
+        
+        } else if (!(lobo.adotado)){
             divlobo.innerHTML = `
                 <div class="textos">
                     <div class="texto_link">
                         <a href="show.html?id=${lobo.id}">Adotar</a>
+                        <div class="nome_idade">
+                            <h2>${lobo.nome}</h2>
+                            <p>Idade: ${lobo.idade} anos</p>
+                        </div>
+                    </div>
+                    <p>${lobo.descricao}</p>
+                    ${lobo.adotado ? '<p><strong>(Adotado)</strong></p>' : ''}
+                </div>
+                <div class="imagens">
+                    <img src="${lobo.imagem}" alt="${lobo.nome}">
+                </div>
+            `;
+        } else {
+            divlobo.innerHTML = `
+                <div class="textos">
+                    <div class="texto_link">
+                        <button class="botao_adotado">Adotado</button>
                         <div class="nome_idade">
                             <h2>${lobo.nome}</h2>
                             <p>Idade: ${lobo.idade} anos</p>
@@ -48,25 +85,20 @@ function renderizarLobos(listadelobos) {
     });
 }
 
-//funcao principal que inicia tudo
-async function carregarHome() {
-    try {
-        const resultado = await buscarLobinhosPaginados(1, 4);
-        renderizarLobos(resultado.dados);
-        console.log("Lobos carregados!");
-    } catch (erro) {
-        console.error("Erro ao carregar a home:", erro);
-    }
-}
-
-
-
+let nome_buscado = "";
 let paginaatual = 1;
 
-// funcao principal para chamar a nova paginacao
+// funcao para carregar os dados da main, com paginacao e pesquisa
 async function carregarDados(pagina) {
     try {
-        const resultado = await buscarLobinhosPaginados(pagina, 4);
+        let resultado;
+        //se tiver algo na pesquisa ele filtra por nome
+        if(nome_buscado){
+            resultado = await buscarLobinhosNome(nome_buscado, pagina, 4, filtroAdotados);
+        }
+        else{
+            resultado = await buscarLobinhosPaginados(pagina, 4, filtroAdotados);
+        }
 
         paginaatual = resultado.pagina;
 
@@ -103,6 +135,11 @@ function renderizarPaginacao(totalPaginas) {
         fim = totalPaginas;
         inicio = totalPaginas - (maxbotoes - 1); //inicio vai ficar quatro numeros antes do ultimo
     }
+
+    if (inicio < 1) { //pra arrumar quando as paginas forem menos de 5 e nao ficar negativo
+        inicio = 1;
+    }
+
     //cria os botoes de numero
     for (let i = inicio; i <= fim; i++) {
         const btnnumero = document.createElement('button');
@@ -129,5 +166,34 @@ function renderizarPaginacao(totalPaginas) {
     container.appendChild(btnpassar);
 }
 
-carregarHome();
+//funcao para tornar a pesquisa funcional
+async function pesquisar() {
+    const input = document.getElementById('input_pesquisa');
+    nome_buscado = input.value.trim(); //esse .trim é um metodo que tira os espaços do começo e do fim para nao dar ruim na pesquisa
+    paginaatual = 1;
+    carregarDados(1);
+}
+
+
+const checkbox_adotados = document.querySelector('#check_adotados input');
+
+
+checkbox_adotados.addEventListener('change', function() {
+    filtroAdotados = this.checked; // change entra na funcao quando muda o estado da checkbox e o this.checked muda o valor da variavel pra o valor booleano da checkbox (inclusive o funtion eh pra fazer o .this funcionar)
+    paginaatual = 1;
+    carregarDados(1);
+});
+
+//fazendo o botao de pesquisa e o enter no input funcionarem
+const botao_procurar = document.getElementById('botao_procurar');
+botao_procurar.addEventListener('click', pesquisar);
+
+const barra_input = document.getElementById('input_pesquisa');
+barra_input.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        pesquisar();
+    }
+});
+
+
 carregarDados(1);

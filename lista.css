@@ -294,7 +294,20 @@ main {
     line-height: 100%;
     text-align: center;
     color: #FFFFFF;
-;
+}
+
+.botao_adotado {
+    width: 157px;
+    height: 51px;
+    background: #7AAC3A;
+    font-family: Darker Grotesque;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
 }
 
 #paginas {
