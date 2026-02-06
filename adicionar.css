@@ -73,7 +73,6 @@ section{
     flex-direction: column;
     width: 958px;
     height: 874px;
-    border-width: 0px, 0px, 0px, 0px;
     border-style: solid;
     border-color: #333333;
     align-items: center;
@@ -198,6 +197,7 @@ section{
     border: 1px solid #333333;
     box-sizing: border-box;
     padding: 10px;
+    resize: none;
 }
 
 #button{
