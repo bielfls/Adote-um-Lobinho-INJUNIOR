@@ -35,10 +35,12 @@ a {
 .nossos:hover{
     text-decoration: underline;
     color: #ffffff;
+    cursor: pointer;
 }
 .somos:hover{
     text-decoration: underline;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .adote {
@@ -366,4 +368,5 @@ a {
     line-height: 1.4;
     color: #333333;
     text-wrap: balance;
+
 }
