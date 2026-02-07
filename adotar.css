@@ -69,6 +69,11 @@ main{
     justify-content: center;
     align-items: center;
     gap: 50px;
+    margin-left: 70px;    
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 #sec1{
@@ -125,7 +130,7 @@ main{
     font-family: 'Darker Grotesque';
 }
 
-#sec2 #email{
+#sec2 #emailDono{
     width: 960px;
     height: 84px;
     border: none;
