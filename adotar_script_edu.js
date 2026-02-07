@@ -58,12 +58,14 @@ async function atualizarLobinhoParcial(id, nome, idade, email){
     }
 }
 
-ID.innerText = id;
+ID.innerText = `ID: ${id}`;
 pegarNomeLobo(id);
+
 
 
 adotar.addEventListener("click", (e) => {
     e.preventDefault();
     console.log("clicado")
     atualizarLobinhoParcial(id,nome,idade,email);
+    window.location.href = 'lista.html';
 });

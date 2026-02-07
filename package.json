@@ -11,5 +11,13 @@
   "license": "ISC",
   "devDependencies": {
     "json-server": "^0.17.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bielfls/Adote-um-Lobinho-INJUNIOR.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bielfls/Adote-um-Lobinho-INJUNIOR/issues"
+  },
+  "homepage": "https://github.com/bielfls/Adote-um-Lobinho-INJUNIOR#readme"
 }
