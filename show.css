@@ -125,6 +125,7 @@ main h1 {
     letter-spacing: 0%;
     text-align: center;
     color: #FFFFFF;
+    transition: 200ms ease;
 }
 
 #botao2 {
@@ -139,6 +140,11 @@ main h1 {
     letter-spacing: 0%;
     text-align: center;
     color: #FFFFFF;
+    transition: 200ms ease;
+}
+
+#botao1:hover, #botao2:hover{
+    transform: scale(1.1);
 }
 
 #botoes {
