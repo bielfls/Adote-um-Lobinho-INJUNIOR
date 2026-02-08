@@ -10,17 +10,23 @@ async function criarLobinho() {
     const foto = document.getElementById('input-foto')
     const descricao = document.getElementById('input-desc')
 
-    /*Montando o objeto*/
-    const novoLobinho = {
-        nome: nome.value,
-        idade: Number(idade.value),
-        descrição: descricao.value,
-        imagem: foto.value,
-        adotado: false,
-        nomeDono: null,
-        idadeDono: null,
-        emailDono: null
-    };
+    /*Conferindo se os campos estão preenchidos*/
+    if (!nome.value || !idade.value || !foto.value || !descricao.value) {
+        alert('Por favor, preencha todos os campos.');
+    } else{
+
+        /*Montando o objeto*/
+        const novoLobinho = {
+            nome: nome.value,
+            idade: Number(idade.value),
+            descrição: descricao.value,
+            imagem: foto.value,
+            adotado: false,
+            nomeDono: null,
+            idadeDono: null,
+            emailDono: null
+        };
+    }
 
     /*Testando se o objeto foi montado*/
     console.log('Objeto montado:', novoLobinho)
