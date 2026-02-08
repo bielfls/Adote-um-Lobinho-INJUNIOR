@@ -7,9 +7,11 @@ const id = params.get('id');
 const ID = document.getElementById("IDlobo");
 
 
+
 /* Pegar o nome do lobinho */
 const nomeLobo = document.getElementById('nomeLobo');
- async function pegarNomeLobo(id){
+const fotoLobo = document.getElementById("fotoLobo");
+async function pegarNomeLobo(id){
     try{
         const response = await fetch(`http://localhost:3000/lobinhos/${id}`);
 
@@ -18,7 +20,9 @@ const nomeLobo = document.getElementById('nomeLobo');
         }
 
         const lobinho = await response.json();
-        nomeLobo.innerText = lobinho.nome
+        nomeLobo.innerText = lobinho.nome;
+        fotoLobo.src = lobinho.imagem;
+        
         console.log('Lobinho Encontrado:', lobinho.nome);
 
     }catch(error){

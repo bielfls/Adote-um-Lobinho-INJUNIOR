@@ -20,7 +20,7 @@
     </header>
     <main>
         <section id="sec1">
-            <div><img src="lobinho.png" alt="Foto de um lobo"></div>
+            <div class="img-container"><img id="fotoLobo" src="lobinho.png" alt="Foto de um lobo"></div>
             <div>
                 <h1 id="nomeLobo">Adotar o(a) NomeDoLobo</h1>
                 <p id="IDlobo">ID:314159</p>
@@ -33,42 +33,32 @@
         </section>
         <button id="adotar">Adotar</button>
     </main>
-    <footer>
-        <div id="retangulo"></div>
-        <div id="linha"></div>
-        <section id="tudo">
-            <section id="sec">
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7350.374380362604!2d-43.135835124911765!3d-22.906465479255385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99817e444e692b%3A0xfd5e35fb577af2f5!2sUFF%20-%20Instituto%20de%20Computa%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sus!4v1770255255831!5m2!1spt-BR!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map"></iframe>
-                </div>
-                <div id="info_link">
-                    <div id="infos">
-                        <div>
-                            <img src="map.png" alt="Pin de um mapa indicando localização" id="pin">
-                            <p>Av. Milton Tavares de Souza, s/n - Sala 115 B - Boa Viagem, Niterói - RJ, 24210-315</p>
-                        </div>
-                        <div>
-                            <img src="telefone.png" alt="Imagem indicando o telefone" id="tel">
-                            <p>(99) 99999-9999</p>
-                        </div>
-                        <div>
-                            <img src="envelope.png" alt="Imagem indicando o email" id="email">
-                            <p>salve-lobos@lobINhos.com</p>
-                        </div>
-                    </div>
-                    <a href="somos.html"><img src="botaoQuem.png" alt="Botão que leva à página Quem somos" id="quem"></a>
-                </div>
-            </section>
-            <section id="rest">
-                <div id="dev">
-                    <p>Desenvolvido com</p>
-                    <div>
-                        <img src="pata.png" alt="Símbolo de pata">
-                    </div>
-                </div>
-            </section>
-        </section>
-    </footer>
+    <footer class="rodape">
+    <div class="iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.206385317079!2d-43.13320302386228!3d-22.905759937812513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99817e0682245b%3A0x868b209b0222165c!2sUFF%20-%20Instituto%20de%20Computa%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1707100000000!5m2!1spt-BR!2sbr" width="250" height="168" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="contatos">
+        <div class="contato-item">
+            <img src="map.png" alt="Localização">
+            <p>Av. Milton Tavares de Souza, s/n - Sala 115 B - Boa Viagem, Niterói - RJ, 24210-315</p>
+        </div>
+        <div class="contato-item">
+            <img src="telefone.png" alt="Telefone">
+            <p>(99) 99999-9999</p>
+        </div>
+        <div class="contato-item">
+            <img src="envelope.png" alt="E-mail">
+            <p>salve-lobos@lobinhos.com</p>
+        </div>
+        <a href="somos.html" class="btn-quem-somos">Quem Somos</a>
+    </div>
+
+    <div class="desenvolvido">
+        <p>Desenvolvido com</p>
+        <img src="pata.png" alt="Logo PATA">
+    </div>
+</footer>
 </body>
 <script src="adotar_script_edu.js"></script>
 </html>

@@ -63,18 +63,16 @@ header #link2{
 main{
     display: flex;
     flex-direction: column;
-    width: 1400px;
+    width: 100vw;
     height: 648px;
     background: #FFFFFF;
     justify-content: center;
     align-items: center;
     gap: 50px;
-    margin-left: 70px;    
+    margin-left: 10px;    
 }
 
-body::-webkit-scrollbar{
-    display: none;
-}
+
 
 #sec1{
     display: flex;
@@ -83,6 +81,14 @@ body::-webkit-scrollbar{
     height: 200px;
     width: 960px;
     gap: 50px;
+}
+
+.img-container{
+    object-fit: contain;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
 }
 
 #sec1 div h1{
@@ -160,113 +166,112 @@ input::placeholder{
     font-weight: 600;
     font-size: 30px;
     color: #FFFFFF;
+    transition: 200ms ease;
+}
+
+#adotar:hover{
+    transform: scale(1.1);
 }
 
 /*----------FOOTER-----------*/
-footer{
-    width: 100%;
-    height: 275px;
-}
-
-#retangulo{
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(270deg, #2C5680 0%, #DEB959 100%);
-}
-
-#linha{
-    width: 100%;
-    height: 0px;
-    border: 1px solid #000000;
-}
-
-footer #tudo{
+.rodape {
+    background-color: #333333;
+    padding: 60px 80px;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 269px;
-    background: #333333;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 200px;
+    align-items: flex-start;
+    color: white;
+    font-family: 'Darker Grotesque', sans-serif;
+    justify-content: center;
+    gap: 50px;
 }
 
-footer #sec{
-    display: flex;
-    flex-direction: row;
-    height: 168px;
-    gap: 40px;
-    margin-right: 50px;
-}
 
-footer #rest{
+.rodape .iframe iframe {
+    width: 250px; 
     height: 168px;
 }
 
-#map{
-    width: 250px;
-    height: 168px;
-    border: none;
-}
-
-#infos{
+.contatos {
     display: flex;
     flex-direction: column;
-    width: 378px;
-    height: 102px;
+    gap: 15px;
+    max-width: 400px;
 }
 
-#infos div{
+.contato-item {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    gap: 15px;
 }
 
-#infos div p{
-    font-family: 'Darker Grotesque';
-    font-weight: 400;
+.contato-item img {
+    width: 20px;
+    height: auto;
+}
+
+.contato-item p {
     font-size: 18px;
-    line-height: 15px;
-    margin-left: 5px;
-    margin-bottom: 5px;
-    color: #FFFFFF;
-    }
-
-#pin{
-    width: 19px;
-    height: 19px;
+    margin: 0;
+    line-height: 1.2;
 }
 
-#tel{
-    width: 14px;
-    height: 14px;
-}
-
-#email{
-    width: 15px;
-    height: 15px;
-}
-
-#info_link #quem{
-    width: 144px;
+.btn-quem-somos {
+    background-color: #DEB959;
+    color: #333333;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    width: fit-content;
+    margin-top: 10px;
+    font-size: 20px;
     height: 30px;
 }
 
-#dev{
+.desenvolvido {
+    text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-#dev p{
-    width: 119px;
-    height: 24px;
-    font-family: 'Darker Grotesque';
-    font-weight: 400;
+.desenvolvido p {
+    margin: 0;
     font-size: 18px;
-    line-height: 100%;
-    color: #FFFFFF;
 }
 
-#dev img{
-    width: 104px;
-    height: 104px;
+.desenvolvido img {
+    width: 120px; 
+}
+
+/* PAGÍNA QUEM SOMOS */
+
+.container-somos {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.textosomos h1 {
+    font-family: 'Darker Grotesque', sans-serif; 
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333333;
+}
+
+.descricaosomos {
+    max-width: 811px;
+}
+
+.descricaosomos p {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #333333;
+    text-wrap: balance;
 }
